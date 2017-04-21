@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A79A154E-11A7-4A35-A9AE-A46DCDC65C7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemBank</RootNamespace>
+    <AssemblyName>SystemBank</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDBankDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDBankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDSystemBankDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSystemBankDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDSystemBankDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSystemBankDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ContaCorrente.cs" />
+    <Compile Include="ContaModelo.cs" />
+    <Compile Include="ContaPoupanca.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaBusca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaBusca.Designer.cs">
+      <DependentUpon>frmTelaBusca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaCadastro.Designer.cs">
+      <DependentUpon>frmTelaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaConta.Designer.cs">
+      <DependentUpon>frmTelaConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaDeposito.Designer.cs">
+      <DependentUpon>frmTelaDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaExcluir.Designer.cs">
+      <DependentUpon>frmTelaExcluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaExtrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaExtrato.Designer.cs">
+      <DependentUpon>frmTelaExtrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaSaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaSaque.Designer.cs">
+      <DependentUpon>frmTelaSaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaTransferencia.Designer.cs">
+      <DependentUpon>frmTelaTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmTelaBusca.resx">
+      <DependentUpon>frmTelaBusca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaCadastro.resx">
+      <DependentUpon>frmTelaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaConta.resx">
+      <DependentUpon>frmTelaConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaDeposito.resx">
+      <DependentUpon>frmTelaDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaExcluir.resx">
+      <DependentUpon>frmTelaExcluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaExtrato.resx">
+      <DependentUpon>frmTelaExtrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaSaque.resx">
+      <DependentUpon>frmTelaSaque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelaTransferencia.resx">
+      <DependentUpon>frmTelaTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="BDBankDataSet.xsc">
+      <DependentUpon>BDBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDBankDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDBankDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDBankDataSet.xss">
+      <DependentUpon>BDBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDSystemBankDataSet.xsc">
+      <DependentUpon>BDSystemBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDSystemBankDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSystemBankDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSystemBankDataSet.xss">
+      <DependentUpon>BDSystemBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDSystemBankDataSet1.xsc">
+      <DependentUpon>BDSystemBankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDSystemBankDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDSystemBankDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDSystemBankDataSet1.xss">
+      <DependentUpon>BDSystemBankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BDBank.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BDBank_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BDBank.mdf</DependentUpon>
+    </Content>
+    <Content Include="BDSystemBank.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BDSystemBank_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BDSystemBank.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
